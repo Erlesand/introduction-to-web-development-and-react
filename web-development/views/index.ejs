@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Introduction to Web Development</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1>Introduction to Web Development</h1>
+
+    <h2>Notes</h2>
+    <ul id="notes">
+      <% if (!notes.length) { %>
+      <li>No files</li>
+      <% } for (let note of notes) { %>
+      <li>
+        <a href="notes/<%= note %>"><%= note.replace(/\.[^/.]+$/, "") %></a>
+      </li>
+      <% } %>
+    </ul>
+
+    <h2>Exercises</h2>
+    <ul id="exercises">
+      <% for (let exercise of exercises) { %>
+      <li>
+        <a href="exercises/<%= exercise %>"
+          ><%= exercise.replace(/\.[^/.]+$/, "") %></a
+        >
+      </li>
+      <% } %>
+    </ul>
+  </body>
+</html>

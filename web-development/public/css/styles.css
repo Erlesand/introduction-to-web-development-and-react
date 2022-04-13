@@ -1,0 +1,39 @@
+body {
+  font-family: "Lato", "Helvetica", Helvetica, sans-serif;
+  background: rgb(84, 138, 164);
+  background: linear-gradient(
+    90deg,
+    rgba(84, 138, 164, 1) 0%,
+    rgba(134, 195, 207, 1) 100%
+  );
+  color: white;
+  padding: 20px;
+  letter-spacing: 1px;
+}
+
+ul {
+  border: 1px solid white;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+}
+
+ul li {
+  padding: 0.5rem;
+  list-style: none;
+  border-bottom: 1px solid white;
+}
+
+ul li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+ul li:last-child {
+  border: none;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
