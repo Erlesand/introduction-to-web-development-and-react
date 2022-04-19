@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flexbox: Wrap</title>
+    <style>
+      section {
+        display: flex;
+        outline: 1px solid lightskyblue;
+      }
+
+      section div {
+        border: 1px solid black;
+        width: calc(50% - 2px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS: Flexbox direction</h1>
+
+    <pre>flex-wrap: no-wrap</pre>
+    <section style="flex-wrap: no-wrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </section>
+
+    <pre>flex-wrap: wrap</pre>
+    <section style="flex-wrap: wrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </section>
+
+    <pre>flex-wrap: wrap-reverse</pre>
+    <section style="flex-wrap: wrap-reverse">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </section>
+  </body>
+</html>

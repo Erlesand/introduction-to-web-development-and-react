@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS: Numerical values</title>
+    <style>
+      .parent {
+        font-size: 16px;
+        border: 1px solid black;
+        margin-bottom: 1rem;
+        padding: 1rem;
+      }
+
+      .child {
+        font-size: 16px;
+      }
+
+      #px .child {
+        font-size: 16px;
+      }
+
+      #em .child {
+        font-size: 2em;
+      }
+
+      #rem .child {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS: Numerical values</h1>
+
+    <div class="parent" id="px">
+      <span>px (16px)</span>
+
+      <div class="child">
+        16px
+
+        <div class="child">16px</div>
+      </div>
+    </div>
+
+    <div class="parent" id="em">
+      <span>em (2em)</span>
+
+      <div class="child">
+        32px
+
+        <div class="child">64px</div>
+      </div>
+    </div>
+
+    <div class="parent" id="rem">
+      <span>rem (2rem)</span>
+
+      <div class="child">
+        32px
+
+        <div class="child">32px</div>
+      </div>
+    </div>
+  </body>
+</html>

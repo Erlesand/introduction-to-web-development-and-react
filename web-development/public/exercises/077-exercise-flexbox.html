@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Example: Flexbox</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        background: skyblue;
+      }
+
+      .body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .main {
+        display: flex;
+        background: white;
+        flex-grow: 1;
+      }
+
+      .main aside {
+        flex-grow: 1;
+      }
+
+      .main main {
+        flex-grow: 2;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="body">
+      <header>
+        <div>Logo</div>
+
+        <div>
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+          </nav>
+        </div>
+
+        <div>Profile</div>
+      </header>
+
+      <div class="main">
+        <aside>
+          <div>Category A</div>
+          <div>Category B</div>
+          <div>Category C</div>
+        </aside>
+
+        <main>
+          <div style="width: 45%">Product A</div>
+          <div style="width: 45%">Product B</div>
+          <div style="width: 45%">Product C</div>
+          <div style="width: 45%">Product D</div>
+          <div style="width: 45%">Product E</div>
+        </main>
+      </div>
+
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>

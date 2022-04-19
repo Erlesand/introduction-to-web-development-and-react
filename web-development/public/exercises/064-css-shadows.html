@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS: Colours</title>
+    <style>
+      section {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS: Shadows</h1>
+
+    <pre>
+box-shadow: &lt;offset-x> &lt;offset-y> &lt;blur> &lt;spread> &lt;colour></pre
+    >
+
+    <section>
+      <div style="box-shadow: 5px 0 0 0 black">offset-x: 5px</div>
+      <div style="box-shadow: 0 5px 0 0 black">offset-y: 5px</div>
+      <div style="box-shadow: 5px 10px 0 0 black">
+        offset-x: 5px offset-y: 10px
+      </div>
+    </section>
+
+    <section>
+      <div style="box-shadow: 5px 10px 0 0 black">blur: 0px</div>
+      <div style="box-shadow: 5px 10px 5px 0 black">blur: 5px</div>
+      <div style="box-shadow: 5px 10px 15px 0 black">blur: 15px</div>
+    </section>
+
+    <section>
+      <div style="box-shadow: 5px 10px 0 0 black">spread: 0px</div>
+      <div style="box-shadow: 5px 10px 0 5px black">spread: 5px</div>
+      <div style="box-shadow: 5px 10px 0 15px black">spread: 15px</div>
+    </section>
+
+    <section>
+      <div>None</div>
+      <div
+        style="
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        "
+      >
+        Large
+      </div>
+      <div style="box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25)">
+        Extra large
+      </div>
+    </section>
+  </body>
+</html>

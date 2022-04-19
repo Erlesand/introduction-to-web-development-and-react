@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercise: Layout</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      header, footer {
+        background: skyblue;
+        height: 100px;
+        line-height: 100px;
+      }
+
+      main {
+        height: calc(100vh - 100px * 2)
+      }
+
+      .center {
+        width: 1000px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="center">Min sida</div>
+    </header>
+
+    <main>
+      <div class="center">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident aspernatur sint, unde, enim numquam similique blanditiis doloribus dolores voluptate eius a dolorum alias. Unde pariatur, alias magni dicta vitae eligendi.
+      </div>
+    </main>
+
+    <footer>
+      <div class="center">Min footer</div>
+    </footer>
+  </body>
+</html>

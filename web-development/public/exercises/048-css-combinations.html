@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Selectors</title>
+
+    <style>
+      #section-a,
+      #section-b {
+        background: #0001;
+      }
+
+      #section-a > div {
+        margin: 10px;
+        outline: 1px solid lightcoral;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Declarations</h1>
+
+    <div>
+      <section id="section-a">
+        <header>Section A</header>
+
+        <pre>#section-a div</pre>
+
+        <div>
+          Child
+
+          <div>Grand-child</div>
+        </div>
+      </section>
+
+      <section id="section-b">
+        <header>Section B</header>
+
+        <pre>#section-a div</pre>
+
+        <div>
+          Child
+
+          <div>Grand-child</div>
+        </div>
+      </section>
+
+      <section id="section-c">
+        <header>Section C</header>
+
+        <div>My content</div>
+      </section>
+    </div>
+  </body>
+</html>

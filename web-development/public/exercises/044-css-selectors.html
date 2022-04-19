@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Selectors</title>
+
+    <style>
+      div {
+        margin-bottom: 1rem;
+      }
+
+      .button {
+        outline: 2px dashed blue !important
+      }
+
+      #register {
+        outline: 2px dashed purple
+      }
+
+      [type="email"] {
+        outline: 2px dashed orange
+      }
+
+      button:active {
+        background: red
+      } 
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Selectors</h1>
+
+    <p>Create account</p>
+    <p>Please fill in your email and password</p>
+
+    <form action="">
+      <div>
+        <input type="email" placeholder="john@example.com" required />
+      </div>
+
+      <div>
+        <input type="password" placeholder="password" required />
+      </div>
+
+      <div>
+        <button class="button" type="reset">Cancel</button>
+        <button class="button" type="submit" id="register">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
