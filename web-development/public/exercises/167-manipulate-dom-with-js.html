@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: Manipulate DOM with JS</title>
+  </head>
+
+  <body>
+    <div id="team">
+      <div>Lenny :D</div>
+      <!-- <div>John Doe</div> -->
+    </div>
+
+    <script>
+      let player = document.createElement("div")
+      player.textContent = "John Doe"
+
+      let team = document.querySelector("#team")
+      team.appendChild(player)
+    </script>
+  </body>
+</html>

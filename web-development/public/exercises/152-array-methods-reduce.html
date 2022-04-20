@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: loops for ... in</title>
+  </head>
+  <body>
+    <script>
+      const bills = [8500, 900, 400];
+
+      const total = bills.reduce(function (accumulator, bill) {
+        return accumulator + bill;
+      }, 0);
+
+      console.log("Total is", total);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: Booleans</title>
+  </head>
+
+  <body>
+    <script>
+      function getFirstLetters(sentence) {
+        var words = sentence.split(" ")
+        var results = [];
+
+        for (var i = 0; i < words.length; i++) {
+          var letter = words[i].charAt(0);
+          results.push(letter)
+        }
+
+        return results
+      }
+
+      console.log(getFirstLetters("Apple Banana Cherry"))
+    </script>
+  </body>
+</html>

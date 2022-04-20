@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: Using document</title>
+  </head>
+
+  <body>
+    <div id="start">
+      <span>Hello</span>
+      <p>
+        <span>World</span>
+      </p>
+      <p>
+        <span>Again</span>
+      </p>
+    </div>
+    <div>
+      <p>Test</p>
+    </div>
+
+    <script>
+      const start = document.getElementById("start")
+      const paragraphs = start.getElementsByTagName("p")
+
+      for (let paragraph of paragraphs) {
+        paragraph.firstElementChild.style.color = "red"
+      }
+    </script>
+  </body>
+</html>

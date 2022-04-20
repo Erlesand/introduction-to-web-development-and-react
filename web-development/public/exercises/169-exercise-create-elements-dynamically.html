@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: Using document</title>
+  </head>
+
+  <body>
+    <script>
+      const fruits = ["🍎", "🍐", "🍌"]
+
+      for (let fruit of fruits) {
+        const el = document.createElement("p");
+        el.textContent = fruit;
+        document.body.appendChild(el);
+      }
+    </script>
+  </body>
+</html>

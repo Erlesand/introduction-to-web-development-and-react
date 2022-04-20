@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: Using document</title>
+  </head>
+
+  <body>
+    <div id="team">
+      <div class="name">Jane Doe</div>
+      <div class="name">John Doe</div>
+      <div class="name">James Doe</div>
+    </div>
+
+    <script>
+      const team = document.getElementById("team");
+
+      console.log(team);
+
+      // Array.from(elements) // Will return an array
+      team.style.backgroundColor = "red"; // Note: camel case
+    </script>
+  </body>
+</html>

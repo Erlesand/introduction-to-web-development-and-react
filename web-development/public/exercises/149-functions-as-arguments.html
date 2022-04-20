@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: loops for ... in</title>
+  </head>
+  <body>
+    <script>
+      function gradeA(value) {
+        return value >= 85;
+      }
+
+      function filter(grades, f) {
+        let newArray = [];
+
+        for (let grade of grades) {
+          if (f(grade)) newArray.push(grade);
+        }
+        return newArray;
+      }
+
+      filter([30, 45, 70, 85, 99], gradeA); // -> [85, 99]
+    </script>
+  </body>
+</html>

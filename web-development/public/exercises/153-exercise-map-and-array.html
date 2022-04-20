@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercise: Array.map()</title>
+  </head>
+
+  <body>
+    <script>
+      // const doubleAll = function (numbers) {
+      //   return numbers.map(function (number) {
+      //     return number * 2
+      //   })
+      // }
+
+      const reducer = function(acc, number) {
+        acc.push(number * 2)
+        return acc
+      }
+
+      const doubleAll = function (numbers) {
+        return numbers.reducer(reducer, [])
+      }
+
+      doubleAll([1, 2, 3])
+    </script>
+  </body>
+</html>
