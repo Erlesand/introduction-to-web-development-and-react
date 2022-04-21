@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercise: My shopping list</title>
+
+    <style></style>
+  </head>
+
+  <body>
+    <h1>>My shopping list</h1>
+
+    <div>
+      Enter a new item:
+      <input id="item" type="text" name="item" />
+      <button id="add" type="button">Add item</button>
+    </div>
+
+    <ul id="cart"></ul>
+
+    <script>
+      const item = document.getElementById("item");
+      const add = document.getElementById("add");
+      const cart = document.getElementById("cart");
+
+      add.addEventListener("click", (event) => {
+        if (!item.value) {
+          return;
+        }
+
+        const li = document.createElement("li");
+        li.innerHTML = `${item.value}<button class="remove">Delete</button>`;
+
+        cart.appendChild(li);
+      });
+
+      document.body.addEventListener("click", function (event) {
+        if (event.target.textContent === "Delete") {
+          const parent = event.target.parentNode;
+          parent.remove();
+        }
+      });
+    </script>
+  </body>
+</html>

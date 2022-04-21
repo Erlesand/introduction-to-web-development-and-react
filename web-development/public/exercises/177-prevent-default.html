@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: Add event listener</title>
+  </head>
+
+  <body>
+    <form>
+      <input type="text" name="name" />
+      <input type="submit" />
+    </form>
+
+    <script>
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", function (e) {
+        const name = document.querySelector("input[name='name']");
+
+        if (name.value.length < 2) {
+          console.log("That's a short name...");
+          e.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -6,19 +6,34 @@
 
   <body>
     <script>
-      function getFirstLetters(sentence) {
+      function longestWord(sentence) {
+        var word = ""
         var words = sentence.split(" ")
-        var results = [];
 
         for (var i = 0; i < words.length; i++) {
-          var letter = words[i].charAt(0);
-          results.push(letter)
+          if (words[i].length > word.length) {
+            word = words[i]
+          }
         }
 
-        return results
+        return word
       }
 
-      console.log(getFirstLetters("Apple Banana Cherry"))
+      longestWord("Lots of JavaScript") // JavaScript
+
+      function unique(data) {
+        var unique = []
+
+        for (var value of data) {
+          if (!unique.includes(value)) {
+            unique.push(value)
+          } 
+        }
+
+        return unique
+      }
+
+      unique([1,2,3,2]) // [1,2,3]
     </script>
   </body>
 </html>

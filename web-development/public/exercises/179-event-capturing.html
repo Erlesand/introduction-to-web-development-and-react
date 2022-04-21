@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: Add event listener</title>
+
+    <style>
+      #body,
+      #body * {
+        outline: 1px solid red;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="body">
+      <div id="parent">
+        <button id="child">Click me</button>
+      </div>
+    </div>
+
+    <script>
+      const logger = function (event) {
+        console.log(this.id, event.target.id);
+      };
+
+      // Want a visual aid? https://domevents.dev/
+      const useCapture = true;
+
+      document.querySelector("#body").addEventListener("click", logger, useCapture);
+      document.querySelector("#parent").addEventListener("click", logger, useCapture);
+      document.querySelector("#child").addEventListener("click", logger, useCapture);
+    </script>
+  </body>
+</html>
