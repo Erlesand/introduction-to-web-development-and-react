@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: ES6 (Array methods)</title>
+  </head>
+
+  <body>
+    <script>
+      const items = [
+        { id: 1, message: "lorem" },
+        { id: 2, message: "ipsum" },
+        { id: 3, message: "dolor" },
+        { id: 4, message: "sit" },
+        { id: 5, message: "amet" },
+      ];
+
+      console.log(items.find((item) => item.id === 3)); // { id: 3, message: "dolor" }
+      console.log(items.findIndex((item) => item.id === 3)); // 2
+    </script>
+  </body>
+</html>

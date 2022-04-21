@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: this (Explicit context binding)</title>
+  </head>
+
+  <body>
+    <script>
+      const Car = function () {
+        this.speed = 0;
+
+        // this.accelerate = function (speed) {
+        //   this.speed = speed;
+
+        //   setTimeout(
+        //     function () {
+        //       console.log(this.speed + " km/h");
+        //     }.bind(this),
+        //     3000
+        //   );
+        // };
+
+        this.accelerate = (speed) => {
+          this.speed = speed;
+          setTimeout(() => console.log(this.speed + " km/h"), 3000);
+        };
+      };
+
+      const car = new Car(); // Create an instance of Car
+      car.accelerate(100);
+    </script>
+  </body>
+</html>

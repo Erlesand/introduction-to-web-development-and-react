@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: ES6 (Object destructuring)</title>
+  </head>
+
+  <body>
+    <script>
+      const basket = {
+        fruit: "🍎",
+        colour: "red",
+        quantity: 4,
+      };
+
+      // const fruit = basket.fruit;
+      // const colour = basket.colour;
+      // const quantity = basket.quantity;
+
+      const { fruit, colour, quantity } = basket;
+
+      console.log(`${fruit} ${colour} (${quantity})`);
+    </script>
+  </body>
+</html>

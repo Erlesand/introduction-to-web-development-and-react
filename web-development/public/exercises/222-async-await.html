@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: Promises</title>
+  </head>
+
+  <body>
+    <script>
+      const alarm = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Time to wake up");
+        }, 2000);
+
+        setTimeout(() => {
+          reject("I will oversleep");
+        }, 5000);
+      });
+
+      // alarm
+      //   .then((response) => console.log("Response", response))
+
+      (async function () {
+        console.log("BEFORE");
+        console.log(await alarm);
+        console.log("HERE WE ARE");
+      })();
+    </script>
+  </body>
+</html>

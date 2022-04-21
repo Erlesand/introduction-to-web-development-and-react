@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: this (Object method context)</title>
+  </head>
+
+  <body>
+    <h1>JavaScript: this (Object method context)</h1>
+
+    <script>
+      function logValue() {
+        console.log("this", this);
+        return this.value;
+      }
+
+      let a = {
+        value: 3,
+        logValue: logValue,
+        b: {
+          value: 5,
+          logValue: logValue,
+        },
+      };
+
+      console.log(a.logValue()); // -> 3
+      console.log(a.b.logValue()); // -> ?
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: ES6 (Default parameters)</title>
+  </head>
+
+  <body>
+    <script>
+      // function teacher(name) {
+      //   return typeof name === "undefined" ? "John Doe" : name;
+      // }
+
+      const teacher = (name = "John Doe") => name;
+
+      console.log(teacher("Lenny"));
+    </script>
+  </body>
+</html>

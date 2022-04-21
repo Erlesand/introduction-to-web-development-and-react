@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSON: Error handling</title>
+  </head>
+
+  <body>
+    <script>
+      let json = '{"fruit": "apple}';
+
+      // JSON.parse(json);
+      try {
+        JSON.parse(json);
+      } catch (err) {
+        console.log("Invalid JSON string", err);
+      }
+
+      console.log("This is the end")
+    </script>
+  </body>
+</html>

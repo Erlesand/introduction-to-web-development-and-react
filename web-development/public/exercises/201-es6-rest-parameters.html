@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: ES6 (Rest parameters)</title>
+  </head>
+
+  <body>
+    <script>
+      // function hyphenate() {
+      //   console.log(arguments);
+      //   return Array.from(arguments).join("-");
+      // }
+
+      const hyphenate = (...words) => {
+        console.log(words);
+        return words.join("-");
+      };
+
+      console.log(hyphenate("Lenny", "Erlesand", "Hello"));
+    </script>
+  </body>
+</html>

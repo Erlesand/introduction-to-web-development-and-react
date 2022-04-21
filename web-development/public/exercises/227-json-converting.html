@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>obj: Converting between objects and JSON</title>
+  </head>
+
+  <body>
+    <script>
+      const fruit = { fruit: "apple" };
+      console.log(typeof fruit, fruit);
+
+      const json = JSON.stringify(fruit);
+      console.log(typeof json, json);
+
+      const obj = JSON.parse(json);
+      console.log(typeof obj, obj);
+    </script>
+  </body>
+</html>

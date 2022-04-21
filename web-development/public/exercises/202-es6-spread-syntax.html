@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript: ES6 (Spread syntax)</title>
+  </head>
+
+  <body>
+    <script>
+      const fruits = ["🍎", "🍌"];
+      const vegetables = ["🥒", "🥬"];
+
+      // console.log(fruits.concat(vegetables));
+      console.log([...fruits, ...vegetables]);
+
+      const _fruits = [...fruits];
+      _fruits.push("Strawberry");
+
+      console.log(fruits, _fruits);
+    </script>
+  </body>
+</html>

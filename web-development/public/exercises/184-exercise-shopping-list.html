@@ -15,30 +15,32 @@
       <button id="add" type="button">Add item</button>
     </div>
 
-    <ul id="cart"></ul>
+    <ul id="cart">
+      <li>Eggs<button class="remove">Delete</button></li>
+    </ul>
 
     <script>
       const item = document.getElementById("item");
       const add = document.getElementById("add");
       const cart = document.getElementById("cart");
 
-      add.addEventListener("click", (event) => {
+      add.addEventListener("click", event => {
         if (!item.value) {
           return;
         }
 
         const li = document.createElement("li");
-        li.innerHTML = `${item.value}<button class="remove">Delete</button>`;
+        li.innerHTML = `${item.value} <button class="remove">Delete</button>`;
 
-        cart.appendChild(li);
+        cart.appendChild(li)
       });
 
       document.body.addEventListener("click", function (event) {
         if (event.target.textContent === "Delete") {
-          const parent = event.target.parentNode;
+          const parent = event.target.parentNode; // <li>
           parent.remove();
         }
-      });
+      })
     </script>
   </body>
 </html>

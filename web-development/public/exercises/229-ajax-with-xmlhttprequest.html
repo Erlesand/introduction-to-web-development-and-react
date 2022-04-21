@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AJAX with XMLHttpRequest</title>
+  </head>
+
+  <body>
+    <script>
+      function reqListener() {
+         console.log(JSON.parse(this.responseText).contents.quotes[0].quote);
+      }
+
+      let oReq = new XMLHttpRequest(); 
+      oReq.addEventListener("load", reqListener)
+      oReq.open("GET", "http://quotes.rest/qod");
+      oReq.send(); 
+    </script>
+  </body>
+</html>

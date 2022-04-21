@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AJAX with XMLHttpRequest</title>
+  </head>
+
+  <body>
+    <script>
+      // function reqListener() {
+      //    console.log(JSON.parse(this.responseText).contents.quotes[0].quote);
+      // }
+
+      // let oReq = new XMLHttpRequest(); 
+      // oReq.addEventListener("load", reqListener)
+      // oReq.open("GET", "http://quotes.rest/qod");
+      // oReq.send(); 
+
+      const getQuote = async () => {
+        const response = await fetch("https://theysaidso.com/api/qod", {
+          // mode: "no-cors",
+          // headers: {
+          //   'Content-Type': 'application/json'
+          // },
+        })
+
+        console.log("RESPONSE", response)
+        const json = await response.json()
+
+        console.log(json)
+      }
+
+      getQuote();
+
+      // const response = await axios.get("http://quotes.rest/qod")
+
+      // console.log(response.data)
+    </script>
+  </body>
+</html>
